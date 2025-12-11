@@ -1,0 +1,176 @@
+# Brain Tumor Classification - Git Ignore
+
+# ============== Python ==============
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# pyenv
+.python-version
+
+# Virtual environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# ============== IDEs ==============
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# Spyder
+.spyderproject
+.spyproject
+
+# ============== TensorFlow / Keras ==============
+# Model files (too large for git)
+*.h5
+*.hdf5
+*.pb
+*.ckpt
+*.keras
+
+# TensorBoard logs
+logs/
+runs/
+tensorboard/
+
+# TensorFlow checkpoints
+checkpoint/
+saved_model/
+model_checkpoints/
+
+# ============== Dataset Files ==============
+# Large dataset directories
+dataset/
+data/
+Training/
+Testing/
+train/
+test/
+validation/
+val/
+
+# Image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.dcm
+
+# Compressed dataset archives
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ============== Output Files ==============
+# Model predictions
+predictions/
+results/
+outputs/
+
+# Plots and visualizations
+*.pdf
+plots/
+figures/
+
+# CSV results
+*.csv
+metrics/
+
+# ============== Environment Variables ==============
+.env
+.env.local
+.env.*.local
+
+# ============== OS Files ==============
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.directory
+
+# ============== Other ==============
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+*.swp
+
+# Archives
+*.sql
+*.sqlite
+*.db

@@ -1,0 +1,216 @@
+/* PredictionResults Component Styles */
+
+.prediction-results {
+    background: var(--bg-glass);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-lg);
+}
+
+.result-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-lg);
+}
+
+.model-badge {
+    padding: 0.5rem 1rem;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: var(--radius-sm);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.processing-time {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.main-prediction {
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: var(--spacing-lg);
+}
+
+.prediction-icon {
+    font-size: 4rem;
+    margin-bottom: var(--spacing-sm);
+    animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.predicted-class {
+    margin: var(--spacing-sm) 0;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 2rem;
+}
+
+.prediction-description {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+}
+
+.confidence-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: var(--spacing-lg) auto;
+}
+
+.confidence-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.confidence-progress {
+    transition: stroke-dasharray 1s ease;
+}
+
+.confidence-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.confidence-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.confidence-label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
+}
+
+.probabilities-section h4 {
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.probability-bars {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.probability-item {
+    animation: slideIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+.probability-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.probability-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.probability-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.probability-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.probability-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+.class-name {
+    color: var(--text-secondary);
+    text-transform: capitalize;
+}
+
+.probability-value {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.probability-bar {
+    height: 8px;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.probability-fill {
+    height: 100%;
+    border-radius: var(--radius-sm);
+    transition: width 1s ease;
+    background: var(--gradient-primary);
+}
+
+/* Wrapper styles */
+.prediction-results-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* No segmentation notice */
+.no-segmentation-notice {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.no-segmentation-notice .notice-icon {
+    font-size: 1.25rem;
+}
+
+.no-segmentation-notice p {
+    margin: 0;
+}
